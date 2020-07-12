@@ -57,7 +57,7 @@
     @apply font-semibold;
     @apply text-sm;
     @apply not-italic;
-    @apply tracking-wider;
+    @apply tracking-wide;
   }
   .content iframe {
     max-width: 83.33%;

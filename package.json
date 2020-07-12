@@ -1,8 +1,8 @@
 {
   "name": "paullavenderjones",
   "description": "My personal website.",
-  "version": "0.0.0",
-  "license": "LICENSE",
+  "version": "1.0.0",
+  "license": "MIT",
   "readme": "README.md",
   "scripts": {
     "dev": "NODE_ENV=development sapper dev --build-dir=dist/dev --no-hot",
@@ -15,6 +15,7 @@
     "compression": "^1.7.1",
     "date-fns": "^2.14.0",
     "node-fetch": "^2.6.0",
+    "parse-yaml": "^0.1.0",
     "polka": "next",
     "sirv": "^0.4.0",
     "snarkdown": "^1.2.2"

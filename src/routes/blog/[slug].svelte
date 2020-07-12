@@ -20,7 +20,7 @@
 <svelte:head>
   <title>{post.title}</title>
   <meta name="description" content={post.description} />
-  <!-- <meta name="keywords" content={project.keywords} /> -->
+  <meta name="keywords" content={post.tags} />
 </svelte:head>
 
 <div class="mb-4 sm:mb-8">

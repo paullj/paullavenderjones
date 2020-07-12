@@ -2,14 +2,17 @@
   export function preload({ params, query }) {
     return this.fetch(`blog.json`)
       .then((r) => r.json())
-      .then((posts) => {
-        return { posts };
+      .then(({ posts, tags }) => {
+        return { posts, tags };
       });
   }
 </script>
 
 <script>
   export let posts;
+  export let tags;
+
+  let filter = null;
 </script>
 
 <svelte:head>
@@ -17,26 +20,57 @@
   <meta name="description" content="Paul Lavender-Jones blog posts" />
 </svelte:head>
 
-<h1 class="mb-4 text-2xl sm:text-3xl">Recent Posts</h1>
+<h1 class="mb-2 text-2xl sm:text-3xl">Recent Posts</h1>
+
+<ul class="mb-4 text-sm text-gray-500">
+  {#each Object.keys(tags) as tag}
+    <li class="inline pr-1" class:text-gray-800={filter === tag}>
+      <button
+        on:click={() => {
+          filter = filter === tag ? null : tag;
+        }}>
+        #{tag}
+      </button>
+    </li>
+  {/each}
+</ul>
 
 <ul class="space-y-1">
-  {#each posts as post}
-    <li>
-      <p
-        class="inline text-xs font-bold tracking-widest text-gray-600 uppercase">
-        {post.date}
-      </p>
-      <a rel="prefetch" href="blog/{post.slug}">
-        <h2
-          class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words hover:underline ">
-          {post.title}
-        </h2>
-      </a>
-    </li>
+  {#if filter}
+    {#each tags[filter] as postIndexes}
+      <li>
+        <p
+          class="inline text-xs font-bold tracking-widest text-gray-600 uppercase">
+          {posts[postIndexes].date}
+        </p>
+        <a rel="prefetch" href="blog/{posts[postIndexes].slug}">
+          <h2
+            class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words hover:underline ">
+            {posts[postIndexes].title}
+          </h2>
+        </a>
+      </li>
+    {/each}
   {:else}
-    <h2
-      class="font-serif text-lg font-normal leading-none tracking-tight break-words">
-      No posts.
-    </h2>
-  {/each}
+    {#each posts as post}
+      <li>
+        <p
+          class="inline text-xs font-bold tracking-widest text-gray-600 uppercase">
+          {post.date}
+        </p>
+        <a rel="prefetch" href="blog/{post.slug}">
+          <h2
+            class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words hover:underline ">
+            {post.title}
+          </h2>
+        </a>
+      </li>
+    {:else}
+      <h2
+        class="font-serif text-lg font-normal leading-none tracking-tight break-words">
+        No posts.
+      </h2>
+    {/each}
+  {/if}
+
 </ul>
