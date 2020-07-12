@@ -9,6 +9,7 @@
 
 	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
 	<link rel='icon' type='image/png' href='favicon.png'>
+  <link rel='sitemap' type='application/xml' href='/sitemap.xml'>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -17,7 +18,17 @@
 
 	<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
-	%sapper.head%
+  %sapper.head%
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172495678-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172495678-1');
+  </script>
 </head>
 <body id='sapper'>
 	<!-- The application will be rendered inside this element,
