@@ -34,16 +34,17 @@
     </p>
   {/if}
 
-  <div class="space-x-2 text-gray-600">
+  <div class="text-gray-600 sm:space-x-2">
     <span class="text-xs font-bold tracking-widest uppercase">{post.date}</span>
+    <span class="font-serif text-sm">{post.readingTime}</span>
+    <span class="hidden sm:inline">&#183;</span>
+    <br class="inline sm:hidden" />
     {#if post.author}
       <div class="inline text-sm font-thin">
         By
         <span>{post.author}</span>
       </div>
     {/if}
-    <span>&#183;</span>
-    <span class="font-serif text-sm">{post.readingTime}</span>
   </div>
 </div>
 
