@@ -1,22 +1,25 @@
 import fs from 'fs';
 import path from 'path';
-import { parseFrontmatter } from '../../utils/parseFrontmatter';
-const baseDir = "content/projects";
 
-export function getProjects() {
+import { parseFrontmatter } from './parseFrontmatter';
+
+export function getAll(baseDir) {
   const files = fs.readdirSync(baseDir).filter(file => file.endsWith('.md') || !file.includes('.'))
-  return files.map(fileName => {
-    const project = getProject(fileName);
+  return files
+    .map(fileName => {
+      const project = getOne(baseDir, fileName);
 
-    const { metadata } = parseFrontmatter(project);
-    return {
-      ...metadata,
-      slug: fileName.replace(/\.[^/.]+$/, ""),
-    };
-  });
+      const { metadata } = parseFrontmatter(project);
+      return {
+        ...metadata,
+        slug: fileName.replace(/\.[^/.]+$/, ""),
+        date: metadata.date ? new Date(metadata.date) : null,
+      };
+    })
+    .sort((a, b) => b.date - a.date);
 }
 
-export function getProject(fileName) {
+export function getOne(baseDir, fileName) {
   if(fileName.endsWith('.md')) {
       return fs.readFileSync(path.resolve(baseDir, fileName), 'utf-8');
   } else {
@@ -28,5 +31,4 @@ export function getProject(fileName) {
       return fs.readFileSync(filePath, 'utf-8');
     }
   }
-  return null;
 }

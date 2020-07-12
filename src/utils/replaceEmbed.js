@@ -13,9 +13,10 @@ const fetchProviders = async () => {
 const fetchEmbed = async (url, params) => {
   const response = await fetch(`${url}?${new URLSearchParams({
     format: 'json',
-    ...params
+    ...params,
+    maxwidth: 1500
   })}`).then(response => response.json());
-  return response
+  return response;
 }
 
 
@@ -69,6 +70,7 @@ export const replaceEmbed = async (markdown) => {
       if (endpoint.url !== null) {
         const response = await fetchEmbed(endpoint.url, endpoint.params)
         const html = transformEmbed(response)
+        console.log(html)
         result = result.replace(match, html)
       }
     }

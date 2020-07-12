@@ -1,7 +1,8 @@
 import snarkdown from 'snarkdown';
 import { format } from 'date-fns'
 
-import { getProject } from './_projects';
+import { getOne } from '../../utils/getContent';
+
 import { parseFrontmatter } from '../../utils/parseFrontmatter';
 import { replaceEmbed } from '../../utils/replaceEmbed';
 import { replaceHighlight } from '../../utils/replaceHighlight';
@@ -9,9 +10,9 @@ import { replaceHighlight } from '../../utils/replaceHighlight';
 export const get = async (req, res, next) => {
 	const { slug } = req.params;
 
-	const post = getProject(slug);
+	const project = getOne('content/articles', slug);
 
-	const { metadata, body } = parseFrontmatter(post);
+	const { metadata, body } = parseFrontmatter(project);
 	const embeded = await replaceEmbed(body);
 	const highlighted = replaceHighlight(embeded);
 	const content = snarkdown(highlighted);
@@ -23,12 +24,12 @@ export const get = async (req, res, next) => {
 
 		res.end(JSON.stringify({
       ...metadata,
-      date: format(new Date(metadata.date), "MMMM yyyy"),
+      date: metadata.date ? format(new Date(metadata.date), 'EEEE do MMMM yyyy') : 'No date.',
       content,
     }));
 	} else {
 		res.writeHead(404, {
-		"Content-Type": "application/json"
+		  "Content-Type": "application/json"
 		});
 
 		res.end(

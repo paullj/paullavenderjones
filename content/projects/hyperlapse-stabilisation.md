@@ -1,10 +1,8 @@
 ---
 title: St Paul's Hyperlapse.
-date: 2016/8
+date: 2018/10
 author: Paul Lavender-Jones
-description: I made a drone.
+description: A photography project using Adobe Lightroom and After Effects to make smooth hyperlapses.
 ---
-
-https://www.instagram.com/p/BdxrvyAHs1T/
 
 https://www.youtube.com/watch?v=9yHH5lzk5kE

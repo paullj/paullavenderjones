@@ -11,13 +11,21 @@
   @import "tailwindcss/base";
   @import "tailwindcss/components";
   @import "tailwindcss/utilities";
+
+  html,
+  body {
+    @apply h-full;
+    @apply font-sans;
+    @apply subpixel-antialiased;
+    @apply bg-white;
+    @apply text-gray-900;
+  }
 </style>
 
-<div
-  class="max-w-screen-md px-4 pt-8 mx-auto font-sans subpixel-antialiased sm:pt-16">
+<div class="flex flex-col h-full max-w-screen-md px-4 pt-8 mx-auto sm:pt-16">
   <Nav {segment} />
-  <main transition:fade>
+  <main transition:fade class="flex-grow">
     <slot />
   </main>
-  <Footer />
+  <Footer class="flex-shrink-0" />
 </div>

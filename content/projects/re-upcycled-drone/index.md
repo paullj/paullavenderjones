@@ -2,23 +2,17 @@
 title: Re/upcycled Drone.
 date: 2016/8
 author: Paul Lavender-Jones
-description: I made a drone.
+description: An affordable quadcopter designed with a recycled/upcycled frame and cheap electronic components.
+thumbnail: assets/content/drone-bottom.webp
 ---
-
-![drone final](assets/content/drone-final.webp?highlight)
-*image caption*
-I gave myself the task of designing and constructing a relatively cheap drone that was made of recycled materials to see if the high cost barrier of quadcopters could be overcome. I designed a sturdy frame comprised of a polycarbonate laptop cover, a mahogany shelf, a metal bookend and a PVC pipe. I calculated the amount of force required to lift my heavy frame and hence got light, powerful but cheap motors from China along with 10 inch propellers for maximum lift.
-
-~Hello~ this is cool i guess. And this is a [link to something](/) else.
-
+![drone finished](assets/content/drone-final.webp?large)
+*The finished quadcopter*
+I designing a drone where the frame was made entirely from recycled materials. This allowed for a ~relatively cheap~ and more ~sustainable~ alternative to a commercially available quadcopter. A rough design was drawn up so that the relevant parts could be sourced.
 ![drone diagram](assets/content/drone-diagram.webp)
 *Assembly and wiring diagram*
-![drone diagram](assets/content/drone-on-grass.webp?highlight)
-
-<!--
- ![drone final](assets/content/20160906_153017.jpg)
-*image caption*
-*image caption*
-image caption
-![drone final](assets/content/20160902_142937.jpg)
-![drone final](assets/content/20160806_175641.jpg) -->
+The sturdy frame comprised of a polycarbonate ~laptop cover~, a mahogany ~shelf~, a steel ~bookend~ and a PVC ~pipe~. The laptop cover made up the main base of the quadcopter, where the recycled shelf arms were attached. The controller and power distribution boards are mounted onto the base where the ECSs can connect to from each arm. The steel bookend was made into a holder for the LiPo battery and attached to the underside of the quadcopter.
+![cutting frame supports](assets/content/drone-bench.webp)
+*Cutting steel bookends for the battery holder*
+Using recycled materials also meant that the frame was on the ~heavier side~ and so I had to use light, ~powerful but cheap motors~ which I sourced from China along with 10 inch propellers for maximum lift.
+![drone on grass](assets/content/drone-on-grass.webp?large)
+*Testing the finished quadcopter*

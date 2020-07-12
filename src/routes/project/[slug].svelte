@@ -2,7 +2,7 @@
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await this.fetch(`projects/${params.slug}.json`);
+    const res = await this.fetch(`project/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
@@ -14,7 +14,7 @@
 </script>
 
 <script>
-  import MarkdownContent from "../../components/MarkdownContent.svelte";
+  import Content from "../../components/Content.svelte";
 
   export let project;
 </script>
@@ -23,11 +23,18 @@
   <title>{project.title}</title>
 </svelte:head>
 
-<div class="mb-4">
-  <h1 class="font-serif text-5xl font-bold tracking-tight">{project.title}</h1>
-  <span class="font-sans text-lg font-light">{project.description}</span>
+<div class="mb-4 sm:mb-8">
+  <h1 class="mb-4 font-serif text-5xl font-bold leading-none tracking-tight">
+    {project.title}
+  </h1>
+  <p class="mb-2 font-sans text-base font-thin sm:text-lg">
+    {project.description}
+  </p>
+  <p class="text-xs font-bold tracking-widest text-gray-600 uppercase">
+    {project.date}
+  </p>
 </div>
-<span>{project.date}</span>
-<MarkdownContent>
+
+<Content>
   {@html project.content}
-</MarkdownContent>
+</Content>

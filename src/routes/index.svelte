@@ -6,6 +6,8 @@
   <img alt="Paul Lavender-Jones" src="me.png" />
 </figure> -->
 
-<h2 class="font-sans text-2xl font-thin">Paul Lavender-Jones</h2>
-<!-- <h1 class="text-5xl">👋🏼 Hi.</h1>
-Hello hello what is up -->
+<h3 class="mt-64 font-serif text-6xl font-bold leading-none tracking-tighter">
+  Paul
+  <br />
+  Lavender-Jones
+</h3>
