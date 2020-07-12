@@ -14,6 +14,7 @@
 
 <svelte:head>
   <title>Blog</title>
+  <meta name="description" content="Paul Lavender-Jones blog posts" />
 </svelte:head>
 
 <h1 class="mb-4 text-2xl sm:text-3xl">Recent Posts</h1>
@@ -26,16 +27,16 @@
         {post.date}
       </p>
       <a rel="prefetch" href="blog/{post.slug}">
-        <h3
+        <h2
           class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words hover:underline ">
           {post.title}
-        </h3>
+        </h2>
       </a>
     </li>
   {:else}
-    <h3
+    <h2
       class="font-serif text-lg font-normal leading-none tracking-tight break-words">
       No posts.
-    </h3>
+    </h2>
   {/each}
 </ul>

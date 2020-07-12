@@ -21,6 +21,8 @@
 
 <svelte:head>
   <title>Projects</title>
+  <meta name="description" content="Paul Lavender-Jones projects" />
+
 </svelte:head>
 
 <h1 class="mb-4 text-2xl sm:text-3xl">Recent Projects</h1>
@@ -36,10 +38,10 @@
           {project.date}
         </p>
         <a rel="prefetch" href="project/{project.slug}">
-          <h3
+          <h2
             class="font-serif text-2xl font-bold leading-none tracking-tight break-words hover:underline sm:text-4xl lg:text-5xl ">
             {project.title}
-          </h3>
+          </h2>
         </a>
       </div>
       <p class="mt-2 mb-8 text-sm font-thin text-gray-900">
@@ -47,9 +49,9 @@
       </p>
     </li>
   {:else}
-    <h3
+    <h2
       class="font-serif text-lg font-normal leading-none tracking-tight break-words">
       No projects.
-    </h3>
+    </h2>
   {/each}
 </ul>

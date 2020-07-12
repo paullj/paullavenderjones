@@ -3,7 +3,9 @@
     <li>
       <a
         href="https://www.linkedin.com/in/paul-lavender-jones/"
+        rel="noopener noreferrer"
         target="_blank">
+        <span class="sr-only">LinkedIn</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -24,7 +26,11 @@
     </li>
 
     <li>
-      <a href="mailto:paul@lavender-jones.com" target="_blank">
+      <a
+        href="mailto:paul@lavender-jones.com"
+        rel="noopener noreferrer"
+        target="_blank">
+        <span class="sr-only">Email</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -40,7 +46,11 @@
       </a>
     </li>
     <li>
-      <a href="https://www.github.com/paullj" target="_blank">
+      <a
+        href="https://www.github.com/paullj"
+        rel="noopener noreferrer"
+        target="_blank">
+        <span class="sr-only">GitHub</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
