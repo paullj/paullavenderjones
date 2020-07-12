@@ -46,5 +46,10 @@
         {project.description}
       </p>
     </li>
+  {:else}
+    <h3
+      class="font-serif text-lg font-normal leading-none tracking-tight break-words">
+      No projects.
+    </h3>
   {/each}
 </ul>

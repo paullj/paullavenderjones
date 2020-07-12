@@ -30,7 +30,7 @@ const getProviderEndpointForLinkUrl = (linkUrl, providers) => {
     for (const endpoint of provider.endpoints || []) {
       for (let schema of endpoint.schemes || []) {
         schema = schema.replace('*', '.*')
-        const regExp = new RegExp(schema)
+        const regExp = new RegExp(schema);
         if (regExp.test(linkUrl)) {
           transformedEndpoint.url = endpoint.url
           transformedEndpoint.params = {
@@ -47,7 +47,7 @@ const getProviderEndpointForLinkUrl = (linkUrl, providers) => {
 
 const transformEmbed = (oembedResult) => {
   if (oembedResult.html) {
-    return oembedResult.html
+    return oembedResult.html;
   } else if (oembedResult.type === 'photo') {
     return `
       <img src="${oembedResult.url}"
@@ -55,7 +55,7 @@ const transformEmbed = (oembedResult) => {
         width="${oembedResult.width}"
         height="${oembedResult.width}"
         title="${oembedResult.title}"/>
-    `
+    `;
   }
   return '';
 }
@@ -63,15 +63,14 @@ const transformEmbed = (oembedResult) => {
 export const replaceEmbed = async (markdown) => {
   let result = markdown;
   const matches = markdown.match(URL_REGEX);
-  const providers = await fetchProviders()
+  const providers = await fetchProviders();
   if(matches) {
     for(const match of matches) {
-      const endpoint = getProviderEndpointForLinkUrl(match, providers)
+      const endpoint = getProviderEndpointForLinkUrl(match, providers);
       if (endpoint.url !== null) {
-        const response = await fetchEmbed(endpoint.url, endpoint.params)
-        const html = transformEmbed(response)
-        console.log(html)
-        result = result.replace(match, html)
+        const response = await fetchEmbed(endpoint.url, endpoint.params);
+        const html = transformEmbed(response);
+        result = result.replace(match, html);
       }
     }
   }

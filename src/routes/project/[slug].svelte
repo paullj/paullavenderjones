@@ -21,15 +21,19 @@
 
 <svelte:head>
   <title>{project.title}</title>
+  <meta name="description" content={project.description} />
+  <!-- <meta name="keywords" content={project.keywords} /> -->
 </svelte:head>
 
 <div class="mb-4 sm:mb-8">
   <h1 class="mb-4 font-serif text-5xl font-bold leading-none tracking-tight">
     {project.title}
   </h1>
-  <p class="mb-2 font-sans text-base font-thin sm:text-lg">
-    {project.description}
-  </p>
+  {#if project.description}
+    <p class="mb-2 font-sans text-base font-thin sm:text-lg">
+      {project.description}
+    </p>
+  {/if}
   <p class="text-xs font-bold tracking-widest text-gray-600 uppercase">
     {project.date}
   </p>

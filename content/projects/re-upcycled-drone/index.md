@@ -1,6 +1,6 @@
 ---
 title: Re/upcycled Drone.
-date: 2016/8
+published: 2016/8
 author: Paul Lavender-Jones
 description: An affordable quadcopter designed with a recycled/upcycled frame and cheap electronic components.
 thumbnail: assets/content/drone-bottom.webp

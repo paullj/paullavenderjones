@@ -13,10 +13,10 @@ export function getAll(baseDir) {
       return {
         ...metadata,
         slug: fileName.replace(/\.[^/.]+$/, ""),
-        date: metadata.date ? new Date(metadata.date) : null,
+        published: metadata.published ? new Date(metadata.published) : null,
       };
     })
-    .sort((a, b) => b.date - a.date);
+    .sort((a, b) => b.published - a.published);
 }
 
 export function getOne(baseDir, fileName) {

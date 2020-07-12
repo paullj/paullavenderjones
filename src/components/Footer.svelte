@@ -29,7 +29,7 @@
     ,
     <br class="sm:hidden" />
     and it's completely
-    <a href="/projects/personal-website" rel="prefetch" class="link">
+    <a href="/project/personal-website" rel="prefetch" class="link">
       open source
     </a>
     ❤️

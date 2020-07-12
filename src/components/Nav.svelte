@@ -5,7 +5,7 @@
     { name: "Home" },
     // { name: "about", href: "about" },
     { name: "Projects", href: "project", prefetch: true },
-    { name: "Articles", href: "article", prefetch: true },
+    { name: "Blog", href: "blog", prefetch: true },
   ];
 </script>
 

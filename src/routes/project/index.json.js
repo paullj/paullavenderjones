@@ -7,7 +7,7 @@ export function get(req, res) {
   });
   const projects = getAll('content/projects').map(project => ({
     ...project,
-    date: project.date ? format(project.date, 'MMMM yyyy') : 'No date.'
+    date: project.published ? format(project.published, 'MMMM yyyy') : 'n/a'
   }))
   res.end(JSON.stringify(projects));
 }

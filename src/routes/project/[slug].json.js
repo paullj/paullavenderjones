@@ -24,7 +24,7 @@ export const get = async (req, res, next) => {
 
 		res.end(JSON.stringify({
       ...metadata,
-      date: metadata.date ? format(new Date(metadata.date), 'MMMM yyyy') : 'No date.',
+      date: metadata.published ? format(new Date(metadata.published), 'MMMM yyyy') : 'n/a',
       content,
     }));
 	} else {
