@@ -16,6 +16,7 @@
         <a
           rel={page.prefetch ? 'prefetch' : undefined}
           aria-current={segment === undefined ? 'page' : undefined}
+          title="{page.name} Page"
           class="hover:underline"
           class:text-black={segment === page.href}
           class:text-gray-500={segment !== page.href}

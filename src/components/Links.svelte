@@ -2,7 +2,18 @@
   <ul class="flex items-center space-x-4">
     <li>
       <a
+        href="mailto:paul@lavender-jones.com"
+        title="Email Address"
+        rel="noopener noreferrer"
+        target="_blank">
+        <span class="sr-only">Email</span>
+        <span class="text-4xl font-bold leading-none">@</span>
+      </a>
+    </li>
+    <li>
+      <a
         href="https://www.linkedin.com/in/paul-lavender-jones/"
+        title="LinkedIn Profile"
         rel="noopener noreferrer"
         target="_blank">
         <span class="sr-only">LinkedIn</span>
@@ -24,31 +35,11 @@
         </svg>
       </a>
     </li>
-
-    <li>
-      <a
-        href="mailto:paul@lavender-jones.com"
-        rel="noopener noreferrer"
-        target="_blank">
-        <span class="sr-only">Email</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="36"
-          height="36">
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path
-            d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0
-            1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55
-            6.662L19.502 5H4.511z"
-            fill="#000" />
-        </svg>
-      </a>
-    </li>
     <li>
       <a
         href="https://www.github.com/paullj"
         rel="noopener noreferrer"
+        title="GitHub Page"
         target="_blank">
         <span class="sr-only">GitHub</span>
         <svg
