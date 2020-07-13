@@ -11,7 +11,7 @@
 	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
 	<link rel='icon' type='image/png' href='favicon.png'>
   <link rel='sitemap' type='application/xml' href='/sitemap.xml'>
-  <meta name=”robots” content=”nofollow” href='/robots.txt'>
+  <meta name=”robots” content=all href='/robots.txt'>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -21,7 +21,6 @@
 	<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
   %sapper.head%
-
 </head>
 <body id='sapper'>
   <!-- Seems quite hacky -->
@@ -34,6 +33,6 @@
 	<!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
-	%sapper.scripts%
+  %sapper.scripts%
 </body>
 </html>

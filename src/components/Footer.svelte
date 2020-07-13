@@ -1,10 +1,14 @@
 <style>
-  .link {
+  a {
     @apply text-red-500;
     @apply font-medium;
   }
-  .link:hover {
+  a:hover {
     @apply underline;
+  }
+  a:focus {
+    @apply bg-red-300;
+    @apply text-red-800;
   }
 </style>
 

@@ -65,11 +65,15 @@
     @apply my-8;
   }
   .content a {
-    @apply text-red-400;
+    @apply text-red-500;
     @apply font-medium;
   }
   .content a:hover {
     @apply underline;
+  }
+  .content a:focus {
+    @apply bg-red-300;
+    @apply text-red-800;
   }
   .content code {
     @apply text-base;
@@ -120,7 +124,7 @@
 </style>
 
 <svelte:head>
-  <base target="_blank" rel="noopener noreferrer" />
+  <base target="_blank" rel="external noopener noreferrer" />
 </svelte:head>
 
 <div class="content">

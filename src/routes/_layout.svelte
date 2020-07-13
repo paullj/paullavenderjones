@@ -24,7 +24,6 @@
   }
 </style>
 
-<Analytics id={GOOGLE_ANALYTICS_ID} />
 <div class="flex flex-col h-full max-w-screen-md px-4 pt-8 mx-auto sm:pt-16">
   <Nav {segment} />
   <main transition:fade class="flex-grow">
@@ -32,3 +31,4 @@
   </main>
   <Footer class="flex-shrink-0" />
 </div>
+<Analytics id={GOOGLE_ANALYTICS_ID} />

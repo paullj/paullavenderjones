@@ -24,7 +24,7 @@
 
 <ul class="mb-4 text-sm text-gray-500">
   {#each Object.keys(tags) as tag}
-    <li class="inline pr-1" class:text-red-500={filter === tag}>
+    <li class="inline pr-1 {filter === tag ? 'text-red-500' : ''}">
       <button
         on:click={() => {
           filter = filter === tag ? null : tag;
