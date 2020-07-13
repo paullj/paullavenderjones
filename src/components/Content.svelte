@@ -31,12 +31,15 @@
     @apply px-0;
   }
   .content img {
+    @apply border-2;
+    @apply border-gray-100;
     max-width: 83.33%;
     @apply mx-auto;
     @apply h-auto;
     @apply my-8;
   }
   .content img[src*="?large"] {
+    @apply border-0;
     max-width: 115%;
     @apply w-full;
     @apply shadow-xl;
