@@ -7,12 +7,12 @@
     @apply underline;
   }
   a:focus {
-    @apply bg-red-300;
-    @apply text-red-800;
+    @apply bg-red-200;
+    @apply text-red-700;
   }
 </style>
 
-<footer class="px-2 py-4 text-xs text-center text-gray-500">
+<footer class="px-2 py-4 text-xs text-center text-gray-600">
   <p>
     This site was made with
     <a

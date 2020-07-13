@@ -72,8 +72,8 @@
     @apply underline;
   }
   .content a:focus {
-    @apply bg-red-300;
-    @apply text-red-800;
+    @apply bg-red-200;
+    @apply text-red-700;
   }
   .content code {
     @apply text-base;
