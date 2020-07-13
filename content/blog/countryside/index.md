@@ -3,7 +3,7 @@ title: Cows of Cambridge
 published: 2020/06/25
 author: Paul Lavender-Jones
 description: and other friends.
-tags: photography
+tags: photography, cambridge
 ---
 ![countryside 6](assets/content/countryside-6.jpg?large)
 ![countryside 3](assets/content/countryside-3.jpg)

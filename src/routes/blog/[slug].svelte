@@ -29,7 +29,7 @@
   </h1>
 
   {#if post.description}
-    <p class="mb-2 font-sans text-base font-thin sm:text-lg">
+    <p class="mb-1 font-sans text-base font-thin sm:text-lg">
       {post.description}
     </p>
   {/if}
@@ -51,35 +51,35 @@
 <Content>
   {@html post.content}
 </Content>
-
-<div class="mb-12">
-  <hr class="mx-auto my-8 border-t border-gray-400" />
+<ul class="my-2 text-sm text-gray-500">
+  {#each post.tags as tag}
+    <li class="inline pr-1">#{tag}</li>
+  {/each}
+</ul>
+<div class="pt-2 mb-12">
+  <hr class="mx-auto mb-8 border-t border-gray-400" />
   <div class="flex justify-between w-full">
     <div class="justify-start text-left">
-      {#if post.prevArticle}
+      {#if post.prev}
         <div>
           <p class="text-xs font-bold tracking-widest text-gray-500 uppercase">
             Previous Post
           </p>
-          <a href="blog/{post.prevArticle.slug}" target="_self" rel="prefetch">
-            <p class="font-serif text-xl hover:underline">
-              {post.prevArticle.title}
-            </p>
+          <a href="blog/{post.prev.slug}" target="_self" rel="prefetch">
+            <p class="font-serif text-xl hover:underline">{post.prev.title}</p>
           </a>
         </div>
       {/if}
     </div>
 
     <div class="justify-end text-right">
-      {#if post.nextArticle}
+      {#if post.next}
         <div>
           <p class="text-xs font-bold tracking-widest text-gray-500 uppercase">
             Next Post
           </p>
-          <a href="blog/{post.nextArticle.slug}" target="_self" rel="prefetch">
-            <p class="font-serif text-xl hover:underline">
-              {post.nextArticle.title}
-            </p>
+          <a href="blog/{post.next.slug}" target="_self" rel="prefetch">
+            <p class="font-serif text-xl hover:underline">{post.next.title}</p>
           </a>
         </div>
       {/if}

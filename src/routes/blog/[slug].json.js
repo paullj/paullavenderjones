@@ -7,7 +7,7 @@ import { parseFrontmatter } from '../../utils/parseFrontmatter';
 import { replaceEmbed } from '../../utils/replaceEmbed';
 import { replaceHighlight } from '../../utils/replaceHighlight';
 
-export const get = async (req, res, next) => {
+export const get = async (req, res) => {
 	const { slug } = req.params;
 
 	const post = getOne('content/blog', slug);
@@ -17,8 +17,8 @@ export const get = async (req, res, next) => {
 	const highlighted = replaceHighlight(embeded);
 	const content = snarkdown(highlighted);
 
-	let prevArticle = null
-  let nextArticle = null
+	let prev = null
+  let next = null
   const posts = getAll('content/blog')
   let currentIndex = -1;
   posts.forEach((article, i) => {
@@ -29,7 +29,7 @@ export const get = async (req, res, next) => {
   if(currentIndex !== -1) {
     //If there's a newer article, grab it
     if (currentIndex > 0) {
-      nextArticle = {
+      next = {
         slug: posts[currentIndex-1].slug,
         title: posts[currentIndex-1].title
       }
@@ -37,7 +37,7 @@ export const get = async (req, res, next) => {
 
     //If there's an older article grab it
     if (currentIndex < posts.length - 1) {
-      prevArticle = {
+      prev = {
         slug: posts[currentIndex+1].slug,
         title: posts[currentIndex+1].title
       }
@@ -54,9 +54,10 @@ export const get = async (req, res, next) => {
       ...metadata,
       date: metadata.published ? format(new Date(metadata.published), 'EEEE do MMMM yyyy') : 'n/a',
       readingTime: `${getReadingTime(post)} minute read`,
+      tags: (metadata.tags || '').split(',').map(s => s.trim()),
       content,
-      prevArticle,
-      nextArticle
+      prev,
+      next
     }));
 	} else {
 		res.writeHead(404, {

@@ -1,6 +1,6 @@
 <style global>
   .content {
-    @apply mb-12;
+    @apply mb-4;
     @apply leading-loose;
     @apply text-lg;
     @apply font-serif;
