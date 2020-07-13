@@ -4,7 +4,7 @@
       <a
         href="mailto:paul@lavender-jones.com"
         title="Email Address"
-        rel="noopener noreferrer"
+        rel="external noopener noreferrer"
         target="_blank">
         <span class="sr-only">Email</span>
         <span class="text-4xl font-bold leading-none">@</span>
@@ -14,7 +14,7 @@
       <a
         href="https://www.linkedin.com/in/paul-lavender-jones/"
         title="LinkedIn Profile"
-        rel="noopener noreferrer"
+        rel="external noopener noreferrer"
         target="_blank">
         <span class="sr-only">LinkedIn</span>
         <svg
@@ -38,7 +38,7 @@
     <li>
       <a
         href="https://www.github.com/paullj"
-        rel="noopener noreferrer"
+        rel="external noopener noreferrer"
         title="GitHub Page"
         target="_blank">
         <span class="sr-only">GitHub</span>

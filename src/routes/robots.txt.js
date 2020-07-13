@@ -6,7 +6,7 @@ const rules = {
   Host: SITE_URL,
 };
 
-export function get(req, res) {
+export const  get = (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   const content = Object.keys(rules).reduce(
     (acc, next) => (acc += `${next}: ${rules[next]}\n`),

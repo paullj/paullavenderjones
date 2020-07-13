@@ -11,6 +11,7 @@
 	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
 	<link rel='icon' type='image/png' href='favicon.png'>
   <link rel='sitemap' type='application/xml' href='/sitemap.xml'>
+  <meta name=”robots” content=”nofollow” href='/robots.txt'>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -23,6 +24,10 @@
 
 </head>
 <body id='sapper'>
+  <!-- Seems quite hacky -->
+  <a href="/sitemap.xml"></a>
+  <a href="/robots.txt"></a>
+
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
   %sapper.html%

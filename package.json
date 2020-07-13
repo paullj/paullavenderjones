@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "NODE_ENV=development sapper dev --build-dir=dist/dev --no-hot",
     "build": "NODE_ENV=production sapper build dist/build",
-    "export": "NODE_ENV=production sapper export dist/export --build-dir=dist/build",
+    "export": "NODE_ENV=production sapper export dist/export --build-dir=dist/build --entry=\"/ /404.html/\"",
     "preview": "vercel",
     "deploy": "vercel --prod"
   },
