@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://paullavenderjones.now.sh/sitemap.xml
