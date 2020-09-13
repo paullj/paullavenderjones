@@ -14,7 +14,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "date-fns": "^2.14.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "parse-yaml": "^0.1.0",
     "polka": "next",
     "sirv": "^0.4.0",
