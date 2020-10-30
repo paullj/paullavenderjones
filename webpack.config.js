@@ -78,7 +78,7 @@ module.exports = {
 			new CopyPlugin({
 				patterns: [
 					{
-						from: 'content/**/*.{webp,png,jpg,jpeg}',
+						from: 'content/**/*.{webp,png,jpg,jpeg,gif}',
 						to: __dirname+'/static/assets/content',
 						flatten: true
 					},

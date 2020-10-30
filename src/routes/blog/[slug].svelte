@@ -40,10 +40,7 @@
     <span class="hidden sm:inline">&#183;</span>
     <br class="inline sm:hidden" />
     {#if post.author}
-      <div class="inline text-sm font-thin">
-        By
-        <span>{post.author}</span>
-      </div>
+      <div class="inline text-sm font-thin">By <span>{post.author}</span></div>
     {/if}
   </div>
 </div>

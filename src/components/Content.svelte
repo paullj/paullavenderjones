@@ -1,10 +1,15 @@
 <style global>
   .content {
-    @apply mb-4;
+    @apply mb-12;
     @apply leading-loose;
     @apply text-lg;
     @apply font-serif;
   }
+  .content br {
+    @apply block;
+    @apply mb-6;
+  }
+
   .content h1,
   .content h2,
   .content h3,
@@ -25,17 +30,26 @@
     @apply text-base;
   }
   .content mark {
-    @apply bg-yellow-300;
     @apply text-gray-900;
+    @apply bg-transparent;
+  }
+  .content mark {
+    @apply bg-yellow-300;
     @apply py-1;
     @apply px-0;
   }
+  .content blockquote > mark {
+    @apply bg-transparent;
+    @apply py-0;
+    @apply underline;
+  }
   .content img {
-    @apply border-2;
-    @apply border-gray-100;
+    @apply border-4;
+    @apply border-gray-200;
     max-width: 83.33%;
     @apply mx-auto;
     @apply h-auto;
+    @apply border-dashed;
     @apply my-8;
   }
   .content img[src*="?large"] {
@@ -50,17 +64,30 @@
       margin-left: -7.5%;
     }
   }
-  .content img + em {
+  .content blockquote {
+    @apply py-2;
+    @apply mt-4;
+    @apply pl-4;
+    @apply font-sans;
+    @apply font-thin;
+    @apply text-xl;
+    @apply leading-relaxed;
+    @apply border-l-4;
+    @apply border-red-400;
+  }
+
+  .content img + blockquote {
     @apply block;
     @apply -mt-4;
-    @apply mb-8;
     @apply text-center;
     @apply font-sans;
     @apply text-gray-600;
-    @apply font-semibold;
+    @apply font-medium;
     @apply text-sm;
     @apply not-italic;
     @apply tracking-wide;
+    @apply py-0;
+    @apply border-0;
   }
   .content iframe {
     max-width: 83.33%;
@@ -100,20 +127,11 @@
     @apply list-disc;
     @apply list-inside;
   }
-  .content li {
-    @apply mb-3;
+  .content ul > li,
+  ol > li {
+    @apply ml-8;
   }
-  .content blockquote {
-    @apply py-2;
-    @apply my-4;
-    @apply pl-4;
-    @apply font-sans;
-    @apply font-thin;
-    @apply text-xl;
-    @apply leading-none;
-    @apply border-l-4;
-    @apply border-red-400;
-  }
+
   .content pre {
     @apply text-base;
     @apply bg-gray-800;
