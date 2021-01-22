@@ -1,0 +1,35 @@
+{
+  "name": "paullavenderjones",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Paul Lavender-Jones <paullj1998@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.1.6",
+    "@sanity/components": "^2.1.4",
+    "@sanity/core": "^2.1.4",
+    "@sanity/dashboard": "^2.1.4",
+    "@sanity/default-layout": "^2.1.6",
+    "@sanity/default-login": "^2.1.4",
+    "@sanity/desk-tool": "^2.1.6",
+    "@sanity/vision": "^2.1.4",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "sanity-plugin-vercel-deploy": "^1.0.9"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paullj/paullavenderjones.git"
+  }
+}

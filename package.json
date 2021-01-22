@@ -1,0 +1,13 @@
+{
+  "name": "paullavenderjones",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/paullj/paullavenderjones.git",
+  "author": "Paul Lavender-Jones <paul@lavender-jones.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "studio",
+    "web"
+  ]
+}
