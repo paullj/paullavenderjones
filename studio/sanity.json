@@ -5,7 +5,7 @@
   },
   "api": {
     "projectId": "3jklkbiv",
-    "dataset": "development"
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
@@ -13,8 +13,9 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
+    "dashboard-widget-netlify",
     "@sanity/dashboard",
-    "vercel-deploy"
+    "@sanity/code-input"
   ],
   "env": {
     "development": {
@@ -27,6 +28,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./parts/variableOverrides.css"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./parts/dashboardConfig.js"
     }
   ]
 }
