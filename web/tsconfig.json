@@ -18,7 +18,9 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "$components/*": ["./src/components/*"]
+      "$components/*": ["./src/components/*"],
+      "$utils/*": ["./src/utils/*"],
+      "$app/*": ["./svelte/assets/runtime/app/*"]
     }
   },
   "include": ["src/**/*"],

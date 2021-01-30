@@ -1,13 +1,13 @@
 <script>
-  import { fade } from 'svelte/transition';
-
   import Header from '$components/Header.svelte';
+  import ProgressBar from '$components/ProgressBar.svelte';
   import Footer from '$components/Footer.svelte';
 </script>
 
 <div class="flex flex-col h-full max-w-screen-lg px-6 pt-8 pb-2 mx-auto sm:px-4 sm:pt-16">
+  <ProgressBar />
   <Header />
-  <main transition:fade class="flex-grow">
+  <main class="flex-grow">
     <slot />
   </main>
   <div class="flex-shrink-0">
@@ -37,7 +37,7 @@
     @apply bg-gray-200;
   }
 
-  html.dark{
+  html.dark {
     @apply text-blue-200;
     @apply bg-gray-900;
   }

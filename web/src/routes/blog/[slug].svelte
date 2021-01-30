@@ -1,42 +1,15 @@
 <script context="module">
-  import BlockContent from '@movingbrands/svelte-portable-text';
-  import sanity from '$utils/sanity';
-
-  export const load = async function ({ page, context, session, fetch }) {
+  export const load = async ({ page, fetch }) => {
     const { slug } = page.params;
-    const filter = '*[_type == "post" && slug.current == $slug][0]';
-    const projection = `{
-      ...,
-      body[]{
-        ...,
-        children[]{
-          ...,
-          _type == 'authorReference' => {
-            _type,
-            author->
-          }
-        }
-      }
-    }`;
-
-    const query = filter + projection;
-    const url = sanity.url(query, { slug });
-
-    const article = await fetch(url)
-      .then(response => response.json())
-      .then(({ result }) => result)
-      .catch(err => console.error(err));
+    const { title, body } = await fetch(`/api/blog/${slug}.json`).then(res => res.json());
     return {
-      props: {
-        title: article.title,
-        body: article.body,
-      },
+      props: { title, body },
     };
   };
 </script>
 
 <script>
-  export let title;
+  export let title: string;
   export let body;
 </script>
 
@@ -46,4 +19,4 @@
 
 <h1>{title}</h1>
 
-{JSON.stringify(body)}
+{@html body}

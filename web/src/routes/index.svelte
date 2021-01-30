@@ -1,3 +1,7 @@
+<script context="module">
+  export const prerender = false;
+</script>
+
 <script>
   import Links from '$components/Links.svelte';
 </script>

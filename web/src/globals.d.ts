@@ -7,8 +7,9 @@
 		import Component from './Component.svelte';
 	 ```
  */
+
 declare module '*.svelte' {
-	export { SvelteComponent as default } from 'svelte';
+  export { SvelteComponent as default } from 'svelte';
 }
 //#endregion
 
@@ -22,33 +23,33 @@ declare module '*.svelte' {
 		<img src="{successkid}">
 	 ```
  */
-declare module "*.gif" {
-	const value: string;
-	export = value;
+declare module '*.gif' {
+  const value: string;
+  export = value;
 }
 
-declare module "*.jpg" {
-	const value: string;
-	export = value;
+declare module '*.jpg' {
+  const value: string;
+  export = value;
 }
 
-declare module "*.jpeg" {
-	const value: string;
-	export = value;
+declare module '*.jpeg' {
+  const value: string;
+  export = value;
 }
 
-declare module "*.png" {
-	const value: string;
-	export = value;
+declare module '*.png' {
+  const value: string;
+  export = value;
 }
 
-declare module "*.svg" {
-	const value: string;
-	export = value;
+declare module '*.svg' {
+  const value: string;
+  export = value;
 }
 
-declare module "*.webp" {
-	const value: string;
-	export = value;
+declare module '*.webp' {
+  const value: string;
+  export = value;
 }
 //#endregion

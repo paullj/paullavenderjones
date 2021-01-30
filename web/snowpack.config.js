@@ -10,4 +10,7 @@ module.exports = {
     $components: './src/components',
     $utils: './src/utils',
   },
+  packageOptions: {
+    types: true,
+  },
 };

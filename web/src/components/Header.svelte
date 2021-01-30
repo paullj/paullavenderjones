@@ -8,7 +8,7 @@
       name: 'Home',
     },
     {
-      href: '/project',
+      href: '/projects',
       name: 'Projects',
     },
     {

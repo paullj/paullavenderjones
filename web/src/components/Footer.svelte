@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<footer class="px-2 my-4 text-xs text-center text-gray-500">
+<footer class="px-2 mt-24 mb-4 text-xs text-center text-gray-500">
   <p>
     This site was made with
     <a

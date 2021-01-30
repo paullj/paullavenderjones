@@ -1,21 +1,8 @@
 <script context="module">
-  import sanity from '$utils/sanity';
-  import { format, parseISO } from 'date-fns';
-
-  export const load = async function ({ page, context, session, fetch }) {
-    const url = sanity.url(
-      '*[_type == "post" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc)'
-    );
-    const posts = await fetch(url)
+  export const load = async function ({ fetch }) {
+    const posts = await fetch('/api/blog.json')
       .then(res => res.json())
-      .then(({ result }) =>
-        result.map(({ title, publishedAt, slug }) => ({
-          title,
-          publishedAt: format(parseISO(publishedAt), 'EEEE do MMMM yyyy'),
-          slug: slug.current,
-        }))
-      )
-      .catch(err => console.error(err));
+      .then(({ posts }) => posts);
 
     return {
       props: {
