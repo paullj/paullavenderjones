@@ -35,7 +35,8 @@
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{title} | Paul Lavender-Jones</title>
+  <meta name="description" content={description} />
 </svelte:head>
 
 <div>

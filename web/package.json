@@ -34,7 +34,6 @@
     "postcss-nested": "^5.0.3",
     "svelte": "^3.29.0",
     "svelte-preprocess": "^4.0.0",
-    "svelte-share-buttons-component": "^1.2.1",
     "tailwindcss": "^2.0.2",
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"

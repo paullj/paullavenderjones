@@ -17,4 +17,8 @@
 
 <svelte:head>
   <title>Paul Lavender-Jones</title>
+  <meta
+    name="description"
+    content="This is my personal website and blog, where I showcase some of my work and projects."
+  />
 </svelte:head>

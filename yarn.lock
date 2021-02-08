@@ -8747,11 +8747,6 @@ svelte-preprocess@^4.0.0, svelte-preprocess@^4.6.0:
     detect-indent "^6.0.0"
     strip-indent "^3.0.0"
 
-svelte-share-buttons-component@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/svelte-share-buttons-component/-/svelte-share-buttons-component-1.2.1.tgz#eba352109cc7fb0680d59146a2a589fd6eb4f237"
-  integrity sha512-Ek6rRmatSTpnONkuxGYApITKIS3VAnuoORlEPWSWE1CZxzbB0qsY3TpxJCPH1b/Fm5S4qQ1hkWAtdfnG8+EaPg==
-
 svelte@^3.29.0:
   version "3.32.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.32.0.tgz#06d7dcdf65e62a708c74231f7099569df43e3af6"

@@ -23,7 +23,8 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Blog | Paul Lavender-Jones</title>
+  <meta name="description" content="Blog posts with some of my thoughts." />
 </svelte:head>
 
 <h1 class="mb-8 text-2xl text-gray-400 dark:text-gray-600 sm:text-3xl">Recent Posts</h1>
