@@ -1,10 +1,13 @@
 <script>
+  import './_global.css';
+  import 'lazysizes';
+
   import Header from '$components/Header.svelte';
-  import ProgressBar from '$components/ProgressBar.svelte';
   import Footer from '$components/Footer.svelte';
+  import ProgressBar from '$components/ProgressBar.svelte';
 </script>
 
-<div class="flex flex-col h-full max-w-screen-lg px-6 pt-8 pb-2 mx-auto sm:px-4 sm:pt-16">
+<div class="flex flex-col h-full max-w-screen-md px-6 pt-8 pb-2 mx-auto sm:px-4 sm:pt-16">
   <ProgressBar />
   <Header />
   <main class="flex-grow">
@@ -14,31 +17,3 @@
     <Footer />
   </div>
 </div>
-
-<style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  body {
-    @apply h-full;
-    @apply bg-transparent;
-  }
-
-  html {
-    @apply h-full;
-    @apply font-sans;
-    @apply subpixel-antialiased;
-
-    @apply transition-colors;
-    @apply duration-150;
-
-    @apply text-gray-900;
-    @apply bg-gray-200;
-  }
-
-  html.dark {
-    @apply text-blue-200;
-    @apply bg-gray-900;
-  }
-</style>

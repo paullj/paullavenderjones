@@ -80,8 +80,8 @@ export default {
       type: 'image',
       options: { hotspot: true },
     },
-    {
-      type: 'code',
-    },
+    { type: 'code' },
+    { type: 'instagram' },
+    { type: 'youtube' },
   ],
 };

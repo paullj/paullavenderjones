@@ -1,4 +1,7 @@
 import { h } from '@sanity/block-content-to-html';
+import getYouTubeID from 'get-youtube-id';
+import fetch from 'node-fetch';
+import { generateImages } from './image';
 
 export default {
   types: {
@@ -11,14 +14,42 @@ export default {
 
       return style === 'blockquote' ? h('blockquote', null, props.children) : h('p', null, props.children);
     },
-    // image: props => {
-    //   if (!props.node.asset) {
-    //     return null;
-    //   }
+    youtube: props => {
+      const attributes = {
+        id: 'player',
+        type: 'text/html',
+        class: 'lazyload',
+        src: `https://www.youtube.com/embed/${getYouTubeID(props.node.url)}`,
+        enablejsapi: true,
+        frameborder: '0',
+      };
+      return h('div', { class: 'youtube' }, h('iframe', attributes, props.children));
+    },
+    instagram: async props => {
+      // FIXME: async serializers don't seem to work...
+      const token = import.meta['env'].SNOWPACK_PUBLIC_INSTAGRAM_TOKEN;
+      const { html } = await fetch(
+        `https://graph.facebook.com/v9.0/instagram_oembed?url=${props.node.url}&access_token=${token}`
+      ).then(response => response.json());
+      return h('div', { class: 'bg-red-500' }, html);
+    },
+    image: props => {
+      if (!props.node.asset) {
+        return null;
+      }
+      const { src, placeholder, srcset, aspectRatio } = generateImages(props.node);
+      const attributes = {
+        class: 'lazyload',
+        style: 'padding-top: ' + aspectRatio,
+        src,
+        srcset: placeholder,
+        'data-srcset': srcset,
+        sizes: 'auto',
+      };
 
-    //   const img = h('img', { src: getImageUrl(props) });
-    //   return props.isInline ? img : h('figure', null, img);
-    // },
+      const img = h('img', attributes);
+      return props.isInline ? img : h('figure', null, img);
+    },
   },
   marks: {
     strong: props => h('strong', null, props.children),

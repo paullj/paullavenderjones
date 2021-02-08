@@ -18,7 +18,7 @@
   ];
 </script>
 
-<nav class="mb-8 text-2xl font-light sm:mx-0 text sm:text-lg">
+<nav class="mb-8 text-xl font-light text sm:text-lg">
   <ul class="flex flex-row justify-between">
     <div class="space-x-6">
       {#each routes as { href, name }}
@@ -36,7 +36,9 @@
     <li
       class="inline-block text-gray-400 transition-colors duration-200 dark:text-blue-300 dark:hover:text-yellow-300 hover:text-yellow-600"
     >
-      <DarkModeToggle />
+      <span class="sm:mr-4">
+        <DarkModeToggle />
+      </span>
     </li>
   </ul>
 </nav>

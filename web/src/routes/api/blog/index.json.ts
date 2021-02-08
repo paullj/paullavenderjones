@@ -13,7 +13,7 @@ export const get = async () => {
   const posts = results.map(({ title, slug, publishedAt }) => ({
     title,
     slug: slug.current,
-    publishedAt: format(parseISO(publishedAt), 'MMMM yyyy'),
+    publishedAt: format(parseISO(publishedAt), 'EEEE do MMMM yyyy'),
   }));
 
   return {

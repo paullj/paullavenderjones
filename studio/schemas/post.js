@@ -24,12 +24,9 @@ export default {
       to: { type: 'author' },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'description',
+      title: 'Description',
+      type: 'string',
     },
     {
       name: 'categories',

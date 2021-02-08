@@ -12,6 +12,7 @@ module.exports = {
   variants: {
     extend: {
       borderWidth: ['responsive', 'hover'],
+      textOpacity: ['dark'],
     },
   },
   plugins: [],
