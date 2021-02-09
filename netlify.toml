@@ -3,3 +3,7 @@
   command = "yarn export"
   publish = "build/"
   functions = "functions/"
+
+[[redirects]]
+  from = "/*"
+  status = 404
