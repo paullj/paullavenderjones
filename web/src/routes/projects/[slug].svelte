@@ -1,7 +1,7 @@
 <script context="module">
   export const load = async ({ page, fetch }) => {
     const { slug } = page.params;
-    const { title, description, publishedAt, mainImage, author, content } = await fetch(`/api/projects/${slug}.json`)
+    const { title, description, publishedAt, coverImage, author, content } = await fetch(`/api/projects/${slug}.json`)
       .then(res => {
         return res.json();
       })
@@ -12,7 +12,7 @@
         description,
         author,
         publishedAt,
-        mainImage,
+        coverImage,
         content,
       },
     };
@@ -30,7 +30,12 @@
     image: string;
   };
   export let publishedAt: string;
-  export let mainImage: {};
+  export let coverImage: {
+    src: string;
+    srcset: string;
+    placeholder: string;
+    sizes: string;
+  };
   export let content: string;
 </script>
 
@@ -43,13 +48,13 @@
   <div class="flex flex-col mt-6 md:mt-24">
     <div class="">
       <span
-        class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase {mainImage
+        class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase {coverImage
           ? 'lg:-ml-24'
           : ''}  dark:text-gray-500 md:text-sm"
       >
         {publishedAt}
       </span>
-      <div class="relative flex  flex-col space-y-6 {mainImage ? 'lg:-ml-24' : ''}  md:space-y-0 md:flex-row">
+      <div class="relative flex  flex-col space-y-6 {coverImage ? 'lg:-ml-24' : ''}  md:space-y-0 md:flex-row">
         <div class="z-10 ">
           <span
             class="font-serif text-6xl font-semibold tracking-tight text-gray-800 title md:text-8xl dark:text-gray-300"
@@ -57,20 +62,20 @@
           >
         </div>
 
-        {#if mainImage}
+        {#if coverImage}
           <img
             class="z-0 self-center w-full max-w-screen-sm mb-4 shadow-xl md:w-auto md:absolute md:right-0 md:h-72 lg:h-96 lazyload lg:-right-24"
-            src={mainImage.src}
-            srcset={mainImage.placeholder}
-            data-srcset={mainImage.srcset}
-            sizes={mainImage.sizes}
-            alt={mainImage.alt}
+            src={coverImage.src}
+            srcset={coverImage.placeholder}
+            data-srcset={coverImage.srcset}
+            sizes={coverImage.sizes}
+            alt="{title} cover image"
           />
         {/if}
       </div>
 
       <div
-        class="relative block mt-4 text-xl leading-normal text-gray-900 md:text-3xl font-extralight dark:text-gray-400 {mainImage
+        class="relative block mt-4 text-xl leading-normal text-gray-900 md:text-3xl font-extralight dark:text-gray-400 {coverImage
           ? 'sm:mt-20 lg:mt-32'
           : ''}"
       >

@@ -50,6 +50,27 @@ export default {
       const img = h('img', attributes);
       return props.isInline ? img : h('figure', null, img);
     },
+    figure: props => {
+      if (!props.node.image.asset) {
+        return null;
+      }
+      const { src, placeholder, srcset, aspectRatio } = generateImages(props.node.image);
+      const attributes = {
+        src,
+        srcset: placeholder,
+        sizes: 'auto',
+        alt: props.node.alt,
+      };
+
+      return h('figure', null, [
+        h('div', [
+          h('div', { style: `padding-bottom: ${100 / aspectRatio}%` }),
+          h('img', { ...attributes, 'data-srcset': srcset, class: 'lazyload' }),
+          h('noscript', h('img', attributes, null)),
+        ]),
+        h('figcaption', props.node.caption),
+      ]);
+    },
   },
   marks: {
     strong: props => h('strong', null, props.children),

@@ -29,8 +29,8 @@ export default {
       type: 'string',
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'coverImage',
+      title: 'Cover Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -58,7 +58,7 @@ export default {
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'coverImage',
     },
     prepare(selection) {
       const { author } = selection;

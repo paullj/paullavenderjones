@@ -15,9 +15,13 @@ This repo contains all the code for my website, [paullj.me](https://paullj.me). 
 ## Todo
 
 - Make it accessible
+- Add captions to images
+- Fix instagram embeds
+- Add interesting demo on frontpage
+- Write more content
 - SEO
 
-Quick start
+## Quick start
 
 1. Clone this repository
 2. `yarn` install in the project root folder

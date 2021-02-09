@@ -11,6 +11,7 @@ import post from './post';
 import project from './project';
 import author from './author';
 
+import figure from './objects/figure';
 import instagram from './objects/instagram';
 import youtube from './objects/youtube';
 
@@ -30,6 +31,7 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
+    figure,
     instagram,
     youtube,
   ]),

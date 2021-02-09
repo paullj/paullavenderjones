@@ -5,19 +5,19 @@ export async function get() {
   const results: any[] = await sanity.fetch(
     `*[_type == "project" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc) {
         title,
-        slug,
+        'slug': slug.current,
         description,
         publishedAt,
-        'image': mainImage.asset->metadata.lqip
+        'coverImage': coverImage.asset->metadata.lqip
       }`
   );
 
-  const projects = results.map(({ title, slug, description, publishedAt, image }) => ({
+  const projects = results.map(({ title, slug, description, publishedAt, coverImage }) => ({
     title,
-    slug: slug.current,
+    slug,
     description,
     publishedAt: format(parseISO(publishedAt), 'MMMM yyyy'),
-    image,
+    coverImage,
   }));
 
   return {

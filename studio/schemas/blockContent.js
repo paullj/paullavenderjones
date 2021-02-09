@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -76,10 +75,7 @@ export default {
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
-      type: 'image',
-      options: { hotspot: true },
-    },
+    { type: 'figure' },
     { type: 'code' },
     { type: 'instagram' },
     { type: 'youtube' },

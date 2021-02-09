@@ -13,7 +13,6 @@
   onMount(() => {
     const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkMode = $preferences?.theme ?? darkMediaQuery.matches;
-
     try {
       // Chrome & Firefox
       darkMediaQuery.addEventListener('change', e => {

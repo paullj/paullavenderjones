@@ -70,8 +70,20 @@
       @apply border-gray-300;
     }
 
-    img {
-      @apply sm:w-3/4 mx-auto w-full my-4 sm:my-10 shadow-lg;
+    figure {
+      @apply sm:w-3/4 mx-auto w-full my-4 sm:my-10;
+    }
+
+    figure > div {
+      @apply overflow-hidden relative;
+    }
+
+    figure > div > img {
+      @apply shadow-lg w-full h-full inset-0 absolute;
+    }
+
+    figure > figcaption {
+      @apply text-center font-sans pt-4 text-gray-600 font-medium text-base;
     }
 
     .youtube {

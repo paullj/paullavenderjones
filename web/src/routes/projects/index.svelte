@@ -16,7 +16,7 @@
   interface Project {
     slug: string;
     title: string;
-    image: string;
+    coverImage: string;
     description: string;
     publishedAt: string;
   }
@@ -31,14 +31,14 @@
 <h1 class="mb-8 text-2xl text-gray-400 dark:text-gray-600 sm:text-3xl">Recent Projects</h1>
 
 <ul class="grid grid-cols-1 gap-y-6 gap-x-4 row">
-  {#each projects as { title, slug, publishedAt, description, image }}
+  {#each projects as { title, slug, publishedAt, description, coverImage }}
     <li class="h-full">
       <div
         class="inline-block text-gray-800   dark:text-gray-300
-        {image
+        {coverImage
           ? 'dark:text-opacity-50 text-opacity-25 bg-center bg-no-repeat bg-cover bg-clip-text'
           : ' text-opacity-100'}"
-        style={image ? `background-image: url(${image})` : ''}
+        style={coverImage ? `background-image: url(${coverImage})` : ''}
       >
         <p class="text-xs font-bold tracking-widest text-opacity-50 uppercase dark:text-gray-500 md:text-sm">
           {publishedAt}

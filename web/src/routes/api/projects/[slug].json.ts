@@ -15,17 +15,17 @@ export const get = async ({ params }) => {
       ...,
       image { ..., asset-> }
     },
-    mainImage {..., asset->},
+    coverImage {..., asset->},
     body[]{
       ...,
-      _type == 'image' => {
+      _type == 'figure' => {
         ...,
-        asset->
+        image { ..., asset-> }
       }
     }
   }`;
 
-  const { title, description, publishedAt, mainImage, body, author } = await sanity
+  const { title, description, publishedAt, coverImage, body, author } = await sanity
     .fetch(query, { slug })
     .catch(error => console.log(error));
   const content = blocksToHtml({ blocks: body, serializers });
@@ -39,7 +39,7 @@ export const get = async ({ params }) => {
         name: author.name,
         image: author.image ? generateImage(author.image, 64) : null,
       },
-      mainImage: mainImage ? generateImages(mainImage) : null,
+      coverImage: coverImage ? generateImages(coverImage) : null,
       content,
     },
     headers: { 'Content-Type': 'application/json' },
