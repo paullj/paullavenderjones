@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { storable } from '$utils/storable';
 
-  const preferences = storable('preferences');
+  const preferredTheme = storable('theme');
   let darkMode = false;
 
   $: if (typeof window != 'undefined') {
@@ -12,7 +12,7 @@
 
   onMount(() => {
     const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    darkMode = $preferences?.theme ?? darkMediaQuery.matches;
+    darkMode = $preferredTheme ? $preferredTheme === 'dark' : darkMediaQuery.matches;
     try {
       // Chrome & Firefox
       darkMediaQuery.addEventListener('change', e => {
@@ -32,7 +32,7 @@
 
   const toggleMode = () => {
     darkMode = !darkMode;
-    $preferences = { ...$preferences, theme: darkMode };
+    $preferredTheme = darkMode ? 'dark' : 'light';
   };
 </script>
 
