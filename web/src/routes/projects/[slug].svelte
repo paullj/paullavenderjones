@@ -50,16 +50,17 @@
       <span
         class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase {coverImage
           ? 'lg:-ml-24'
-          : ''}  dark:text-gray-500 md:text-sm"
+          : ''}  dark:text-blue-300 md:text-sm"
       >
         {publishedAt}
       </span>
       <div class="relative flex  flex-col space-y-6 {coverImage ? 'lg:-ml-24' : ''}  md:space-y-0 md:flex-row">
         <div class="z-10 ">
           <span
-            class="font-serif text-6xl font-semibold tracking-tight text-gray-800 title md:text-8xl dark:text-gray-300"
-            >{title}</span
+            class="font-serif text-6xl font-semibold tracking-tight text-gray-800 title md:text-8xl dark:text-gray-200"
           >
+            {title}
+          </span>
         </div>
 
         {#if coverImage}
@@ -75,7 +76,7 @@
       </div>
 
       <div
-        class="relative block mt-4 text-xl leading-normal text-gray-900 md:text-3xl font-extralight dark:text-gray-400 {coverImage
+        class="relative block mt-4 text-xl leading-normal text-gray-900 md:text-3xl font-extralight dark:text-gray-200 {coverImage
           ? 'sm:mt-20 lg:mt-32'
           : ''}"
       >
@@ -108,10 +109,10 @@
     --tsc: rgb(243, 244, 246, 1);
   }
   :global(:root).dark {
-    --tsc: rgb(17, 24, 39, 0.2);
+    --tsc: rgb(17, 24, 39, 1);
   }
   .title {
-    text-shadow: 0px 2px 0 var(--tsc), 0px -2px 0 var(--tsc), -2px 0px 0 var(--tsc), 2px 0px 0 var(--tsc),
-      2px 2px 0 var(--tsc), -2px -2px 0 var(--tsc), -2px 2px 0 var(--tsc), 2px -2px 0 var(--tsc);
+    text-shadow: 0px 2.5px 0 var(--tsc), 0px -2.5px 0 var(--tsc), -2.5px 0px 0 var(--tsc), 2.5px 0px 0 var(--tsc),
+      2.5px 2.5px 0 var(--tsc), -2.5px -2.5px 0 var(--tsc), -2.5px 2.5px 0 var(--tsc), 2.5px -2.5px 0 var(--tsc);
   }
 </style>

@@ -83,7 +83,8 @@
     }
 
     figure > figcaption {
-      @apply text-center font-sans pt-4 text-gray-600 font-medium text-base;
+      @apply text-center font-sans pt-4 font-medium text-base;
+      @apply text-gray-500 dark:text-blue-300;
     }
 
     .youtube {
