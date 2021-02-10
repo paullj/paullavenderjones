@@ -40,7 +40,7 @@
           : ' text-opacity-100'}"
         style={coverImage ? `background-image: url(${coverImage})` : ''}
       >
-        <p class="text-xs font-bold tracking-widest text-opacity-50 uppercase dark:text-gray-500 md:text-sm">
+        <p class="text-xs font-bold tracking-widest text-opacity-50 uppercase dark:text-gray-400 md:text-sm">
           {publishedAt}
         </p>
         <a rel="prefetch" href="projects/{slug}">

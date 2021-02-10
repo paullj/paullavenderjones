@@ -33,13 +33,13 @@
   {#each posts as { slug, title, publishedAt }}
     <li>
       <p
-        class="inline text-xs font-bold tracking-widest text-gray-600 uppercase align-text-bottom sm:text-sm md:text-base"
+        class="inline text-xs font-bold tracking-widest text-gray-600 uppercase align-text-bottom dark:text-gray-400 sm:text-sm md:text-base"
       >
         {publishedAt}
       </p>
       <a href="blog/{slug}" rel="prefetch">
         <h2
-          class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words sm:text-xl md:text-2xl hover:underline"
+          class="inline ml-2 font-serif text-lg font-normal leading-none tracking-tight break-words dark:text-gray-200 sm:text-xl md:text-2xl hover:underline"
         >
           {title}
         </h2>
