@@ -8,7 +8,9 @@
 </script>
 
 <a class="" {href} target="_blank" rel="noopener" aria-label={ariaLabel}>
-  <div class="inline-block text-gray-500 transition-colors duration-200 hover:text-blue-600">
+  <div
+    class="inline-block text-gray-500 transition-colors duration-200 dark:text-blue-200 dark:hover:text-blue-500 hover:text-blue-600"
+  >
     <div aria-hidden="true">
       <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
         ><path
