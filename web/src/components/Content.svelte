@@ -37,7 +37,7 @@
     p,
     li {
       @apply font-serif font-extralight text-lg leading-8 md:text-xl md:leading-10;
-      @apply dark:text-blue-200;
+      @apply dark:text-gray-200;
     }
     a {
       @apply border-b-2 border-dotted;

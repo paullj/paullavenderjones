@@ -15,7 +15,6 @@ This repo contains all the code for my website, [paullj.me](https://paullj.me). 
 ## Todo
 
 - Make it accessible
-- Add captions to images
 - Fix instagram embeds
 - Add interesting demo on frontpage
 - Write more content

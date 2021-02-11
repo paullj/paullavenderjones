@@ -51,7 +51,7 @@
   <div class="flex flex-col mt-6 md:mt-24">
     <div class="">
       <span
-        class="block mb-1 text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase dark:text-gray-500 md:text-sm"
+        class="block mb-1 text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase dark:text-blue-300 md:text-sm"
       >
         {publishedAt}
       </span>
@@ -60,7 +60,7 @@
       >
 
       <div
-        class="relative block mt-4 text-xl leading-loose text-gray-900 md:text-2xl font-extralight dark:text-gray-400"
+        class="relative block mt-4 text-xl leading-loose text-gray-900 md:text-2xl font-extralight dark:text-gray-200"
       >
         {description}
       </div>
@@ -71,7 +71,7 @@
         <span class="hidden sm:block">·</span>
         <div class="flex items-center space-x-6">
           <span
-            class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase dark:text-gray-500"
+            class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase dark:text-gray-300"
           >
             {readingTime}
           </span>
