@@ -47,17 +47,19 @@
 <div>
   <div class="flex flex-col mt-6 md:mt-24">
     <div class="">
-      <span
-        class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase {coverImage
-          ? 'lg:-ml-24'
-          : ''}  dark:text-blue-300 md:text-sm"
+      <div
+        class="relative flex flex-col space-y-6 {coverImage
+          ? 'lg:-ml-24 md:h-72 lg:h-96'
+          : ''}  md:space-y-0 md:flex-row md:items-center"
       >
-        {publishedAt}
-      </span>
-      <div class="relative flex  flex-col space-y-6 {coverImage ? 'lg:-ml-24' : ''}  md:space-y-0 md:flex-row">
         <div class="z-10 ">
           <span
-            class="font-serif text-6xl font-semibold tracking-tight text-gray-800 title md:text-8xl dark:text-gray-200"
+            class="block text-xs font-bold tracking-widest text-gray-700 text-opacity-50 uppercase dark:text-blue-300 md:text-sm"
+          >
+            {publishedAt}
+          </span>
+          <span
+            class="block font-serif text-6xl font-semibold tracking-tight text-gray-800 title md:text-8xl dark:text-gray-200"
           >
             {title}
           </span>
@@ -77,7 +79,7 @@
 
       <div
         class="relative block mt-4 text-xl leading-normal text-gray-900 md:text-3xl font-extralight dark:text-gray-200 {coverImage
-          ? 'sm:mt-20 lg:mt-32'
+          ? 'sm:mt-8 lg:mt-12'
           : ''}"
       >
         {description}
