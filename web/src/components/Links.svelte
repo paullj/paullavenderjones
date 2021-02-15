@@ -67,7 +67,12 @@
       </a>
     </li>
     <li class="inline transition-colors duration-200 dark:hover:text-yellow-300 hover:text-yellow-700">
-      <a href="" class="flex flex-row items-center" rel="external noopener noreferrer" target="_blank">
+      <a
+        href="/Paul_LavenderJones_CV_2021.pdf"
+        class="flex flex-row items-center"
+        rel="external noopener noreferrer"
+        target="_blank"
+      >
         <svg
           class="w-8 h-8 mr-1 sm:w-3 sm:h-3"
           viewBox="0 0 15 15"
