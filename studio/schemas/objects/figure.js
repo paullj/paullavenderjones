@@ -1,7 +1,10 @@
+import { BsImage } from 'react-icons/bs';
+
 export default {
   name: 'figure',
   type: 'object',
   title: 'Figure',
+  icon: BsImage,
   fields: [
     {
       name: 'image',

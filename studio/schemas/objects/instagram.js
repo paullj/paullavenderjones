@@ -1,5 +1,6 @@
 import React from 'react';
 import InstagramEmbed from 'react-instagram-embed';
+import { FaInstagram } from 'react-icons/fa';
 
 const InstagramPreview = ({ value }) => {
   const { url } = value;
@@ -14,6 +15,7 @@ export default {
   type: 'object',
   name: 'instagram',
   title: 'Instagram Post',
+  icon: FaInstagram,
   fields: [
     {
       name: 'url',

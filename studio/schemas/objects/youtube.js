@@ -1,6 +1,7 @@
 import React from 'react';
 import getYouTubeId from 'get-youtube-id';
 import YouTube from 'react-youtube';
+import { FaYoutube } from 'react-icons/fa';
 
 const Preview = ({ value }) => {
   const { url } = value;
@@ -19,6 +20,7 @@ export default {
       title: 'YouTube video URL',
     },
   ],
+  icon: FaYoutube,
   preview: {
     select: {
       url: 'url',

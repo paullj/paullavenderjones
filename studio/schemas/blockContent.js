@@ -8,6 +8,9 @@
  *    type: 'blockContent'
  *  }
  */
+import React from 'react';
+import { BiHighlight } from 'react-icons/bi';
+import { FiExternalLink, FiLink } from 'react-icons/fi';
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -39,7 +42,14 @@ export default {
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
-          { title: 'Highlight', value: 'highlight' },
+          {
+            title: 'Highlight',
+            value: 'highlight',
+            blockEditor: {
+              icon: BiHighlight,
+              render: props => <span style={{ backgroundColor: '#F3E841' }}>{props.children}</span>,
+            },
+          },
           { title: 'Underline', value: 'underline' },
           { title: 'Strike', value: 'strike-through' },
         ],
@@ -49,6 +59,14 @@ export default {
             title: 'URL',
             name: 'link',
             type: 'object',
+            icon: FiExternalLink,
+            blockEditor: {
+              render: props => (
+                <span>
+                  {props.children} <FiExternalLink />
+                </span>
+              ),
+            },
             fields: [
               {
                 title: 'URL',
@@ -61,11 +79,12 @@ export default {
             name: 'internalLink',
             type: 'object',
             title: 'Internal link',
+            icon: FiLink,
             fields: [
               {
                 name: 'reference',
                 type: 'reference',
-                to: [{ type: 'post' }],
+                to: [{ type: 'post' }, { type: 'project' }],
               },
             ],
           },
