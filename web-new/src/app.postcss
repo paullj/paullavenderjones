@@ -1,0 +1,26 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply h-full;
+	@apply bg-transparent;
+}
+
+html {
+	@apply h-full;
+	@apply font-sans;
+	@apply subpixel-antialiased;
+
+	@apply transition-colors;
+	@apply duration-150;
+
+	@apply text-gray-900;
+	@apply bg-gray-100;
+}
+
+html.dark {
+	@apply text-blue-200;
+	@apply bg-gray-900;
+}

@@ -30,7 +30,8 @@
     "react-icons": "^4.2.0",
     "react-instagram-embed": "^2.0.0",
     "react-youtube": "^7.13.1",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
+    "sanity-plugin-markdown": "^2.0.0"
   },
   "devDependencies": {},
   "repository": {

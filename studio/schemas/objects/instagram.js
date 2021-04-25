@@ -8,7 +8,7 @@ const InstagramPreview = ({ value }) => {
     return <p>Missing URL for Instagram post</p>;
   }
 
-  return <InstagramEmbed url={url} maxWidth={480} containerTagName="div" injectScript />;
+  return <InstagramEmbed url={url} maxWidth={480} clientAccessToken="4120782524617276|LF_K-vea_5HlOhaQT4xQ06JHAJY" />;
 };
 
 export default {

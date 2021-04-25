@@ -8,8 +8,7 @@
   "private": true,
   "workspaces": [
     "studio",
-    "web",
-    "neat"
+    "web"
   ],
   "scripts": {
     "dev": "npm-run-all --parallel dev:web dev:studio",

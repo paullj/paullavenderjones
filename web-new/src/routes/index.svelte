@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import Links from '$components/Links.svelte';
+
 </script>
 
 <div>
@@ -12,7 +12,6 @@
     <br />
     Lavender-Jones
   </div>
-  <Links />
 </div>
 
 <svelte:head>

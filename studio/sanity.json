@@ -15,7 +15,8 @@
     "@sanity/desk-tool",
     "dashboard-widget-netlify",
     "@sanity/dashboard",
-    "@sanity/code-input"
+    "@sanity/code-input",
+    "markdown"
   ],
   "env": {
     "development": {
